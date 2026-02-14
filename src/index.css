@@ -1,95 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 220 20% 97%;
+    --foreground: 220 20% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 20% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 20% 10%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 217 91% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 20% 95%;
+    --secondary-foreground: 220 20% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 14% 93%;
+    --muted-foreground: 220 10% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 30 95% 55%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 217 91% 50%;
 
-    --radius: 0.5rem;
+    --radius: 1.25rem;
+
+    /* Custom service colors */
+    --service-info: 217 91% 95%;
+    --service-info-icon: 217 91% 50%;
+    --service-emergency: 0 85% 95%;
+    --service-emergency-icon: 0 75% 55%;
+    --service-health: 152 60% 93%;
+    --service-health-icon: 152 60% 40%;
+    --service-blood: 0 85% 95%;
+    --service-blood-icon: 0 75% 50%;
+    --service-police: 240 50% 93%;
+    --service-police-icon: 240 50% 45%;
+    --service-ambulance: 152 60% 93%;
+    --service-ambulance-icon: 152 60% 40%;
+    --service-doctor: 180 50% 93%;
+    --service-doctor-icon: 180 50% 40%;
+    --service-pharmacy: 340 60% 93%;
+    --service-pharmacy-icon: 340 60% 45%;
+    --service-electric: 45 95% 92%;
+    --service-electric-icon: 45 90% 50%;
+    --service-fire: 15 90% 93%;
+    --service-fire-icon: 15 85% 50%;
+    --service-transport: 210 50% 93%;
+    --service-transport-icon: 210 50% 45%;
+    --service-education: 152 50% 93%;
+    --service-education-icon: 152 50% 40%;
+    --service-tourism: 200 70% 93%;
+    --service-tourism-icon: 200 70% 45%;
+    --service-job: 217 80% 93%;
+    --service-job-icon: 217 80% 45%;
+    --service-legal: 270 50% 93%;
+    --service-legal-icon: 270 50% 45%;
+    --service-shop: 340 70% 93%;
+    --service-shop-icon: 340 70% 45%;
+    --service-donation: 340 60% 93%;
+    --service-donation-icon: 340 60% 45%;
+    --service-agriculture: 100 50% 93%;
+    --service-agriculture-icon: 100 50% 40%;
+    --service-courier: 25 80% 93%;
+    --service-courier-icon: 25 80% 45%;
+    --service-house: 260 50% 93%;
+    --service-house-icon: 260 50% 45%;
+    --service-developer: 220 20% 93%;
+    --service-developer-icon: 220 20% 45%;
+    --service-food: 30 80% 93%;
+    --service-food-icon: 30 80% 45%;
+    --service-repair: 200 30% 93%;
+    --service-repair-icon: 200 30% 45%;
+    --service-document: 152 40% 93%;
+    --service-document-icon: 152 40% 40%;
+    --service-marriage: 340 65% 93%;
+    --service-marriage-icon: 340 65% 45%;
+    --service-tuition: 200 50% 93%;
+    --service-tuition-icon: 200 50% 45%;
+
+    /* Gradients */
+    --gradient-stats: linear-gradient(135deg, hsl(195 80% 45%), hsl(217 91% 50%));
+    --gradient-header: linear-gradient(180deg, hsl(220 20% 97%) 0%, hsl(220 30% 95%) 100%);
+    --gradient-update: linear-gradient(90deg, hsl(30 95% 55%), hsl(40 95% 55%));
+    --gradient-coming-soon: linear-gradient(135deg, hsl(30 95% 55%), hsl(25 90% 50%));
+
+    /* Shadows */
+    --shadow-card: 0 4px 12px hsla(220, 20%, 10%, 0.05);
+    --shadow-card-hover: 0 8px 24px hsla(220, 20%, 10%, 0.1);
+    --shadow-slider: 0 8px 30px hsla(220, 20%, 10%, 0.12);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
@@ -101,5 +119,26 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Noto Sans Bengali', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .service-card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+  .service-card-shadow-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+  .slider-shadow {
+    box-shadow: var(--shadow-slider);
+  }
+  .stats-gradient {
+    background: var(--gradient-stats);
+  }
+  .coming-soon-badge {
+    background: var(--gradient-coming-soon);
   }
 }
