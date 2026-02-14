@@ -4,9 +4,9 @@ import slider2 from "@/assets/slider-2.jpg";
 import slider3 from "@/assets/slider-3.jpg";
 
 const slides = [
-  { image: slider1, caption: "অপরূপ সৌন্দর্যে ঘেরা পাথরঘাটার-হরিণঘাটা" },
-  { image: slider2, caption: "সবুজ শ্যামল পাথরঘাটার প্রকৃতি" },
-  { image: slider3, caption: "পাথরঘাটার স্থানীয় বাজার" },
+  { image: slider1, caption: "রামগঞ্জের ঐতিহ্যবাহী প্রাকৃতিক সৌন্দর্য" },
+  { image: slider2, caption: "সবুজ শ্যামল রামগঞ্জের গ্রামীণ জীবন" },
+  { image: slider3, caption: "রামগঞ্জ বাজার — লক্ষ্মীপুর জেলা" },
 ];
 
 const HeroSlider = () => {
