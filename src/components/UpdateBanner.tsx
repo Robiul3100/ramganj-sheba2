@@ -10,7 +10,7 @@ const UpdateBanner = () => {
         </span>
         <div className="overflow-hidden flex-1">
           <p className="text-sm text-muted-foreground whitespace-nowrap animate-marquee">
-            আলাইকুম, আমাদের "ডিজিটাল মার্কেট" পরিষেবা চালু হয়েছে। সকলকে স্বাগতম!
+            আসসালামু আলাইকুম! রামগঞ্জ ডিজিটাল সেবায় আপনাকে স্বাগতম। রামগঞ্জ থানার সকল সেবা এখন আপনার হাতের মুঠোয়!
           </p>
         </div>
       </div>

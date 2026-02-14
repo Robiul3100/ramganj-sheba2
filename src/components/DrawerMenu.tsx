@@ -1,4 +1,4 @@
-import { X, Home, Info, Phone, Heart, Settings, Star } from "lucide-react";
+import { X, Home, Info, Phone, Heart, Settings, Star, Code } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 interface DrawerMenuProps {
@@ -8,7 +8,7 @@ interface DrawerMenuProps {
 
 const menuItems = [
   { icon: Home, label: "হোম", path: "/" },
-  { icon: Info, label: "পাথরঘাটা সম্পর্কে", path: "/service/about" },
+  { icon: Info, label: "রামগঞ্জ সম্পর্কে", path: "/service/about" },
   { icon: Phone, label: "জরুরি কল", path: "/service/emergency-call" },
   { icon: Heart, label: "অনুদান", path: "/service/donation" },
   { icon: Star, label: "রেটিং দিন", path: "/" },
@@ -29,10 +29,10 @@ const DrawerMenu = ({ isOpen, onClose }: DrawerMenuProps) => {
             <X className="w-5 h-5 text-primary-foreground" />
           </button>
           <div className="w-16 h-16 rounded-full bg-primary-foreground/20 flex items-center justify-center mb-3">
-            <span className="text-2xl font-bold">প</span>
+            <span className="text-2xl font-bold">র</span>
           </div>
-          <h2 className="text-lg font-bold">পাথরঘাটা শপ</h2>
-          <p className="text-sm opacity-80">ডিজিটাল সেবা সহযোগী</p>
+          <h2 className="text-lg font-bold">রামগঞ্জ ডিজিটাল সেবা</h2>
+          <p className="text-sm opacity-80">লক্ষ্মীপুর জেলা</p>
         </div>
         <nav className="flex-1 py-2">
           {menuItems.map((item, i) => (
@@ -47,7 +47,7 @@ const DrawerMenu = ({ isOpen, onClose }: DrawerMenuProps) => {
           ))}
         </nav>
         <div className="px-5 py-4 text-center text-xs text-muted-foreground border-t border-border">
-          v1.0.0 · পাথরঘাটা আইটি সলিউশন
+          <p>v1.0.0 · Developed by <span className="font-semibold text-primary">RSF ROBIUL</span></p>
         </div>
       </aside>
     </div>

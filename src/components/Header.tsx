@@ -18,9 +18,9 @@ const Header = ({ onMenuClick }: HeaderProps) => {
           </button>
           <div>
             <h1 className="text-xl font-bold leading-tight">
-              পাথরঘাটা <span className="text-primary">শপ</span>
+              রামগঞ্জ <span className="text-primary">ডিজিটাল সেবা</span>
             </h1>
-            <p className="text-xs text-muted-foreground">ডিজিটাল সহযোগী</p>
+            <p className="text-xs text-muted-foreground">লক্ষ্মীপুর জেলা</p>
           </div>
         </div>
         <button className="relative w-11 h-11 flex items-center justify-center rounded-full bg-secondary">
