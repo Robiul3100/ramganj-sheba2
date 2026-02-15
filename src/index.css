@@ -89,6 +89,20 @@
     --service-marriage-icon: 340 65% 45%;
     --service-tuition: 200 50% 93%;
     --service-tuition-icon: 200 50% 45%;
+    --service-news: 220 70% 93%;
+    --service-news-icon: 220 70% 45%;
+    --service-market: 160 60% 93%;
+    --service-market-icon: 160 60% 40%;
+    --service-islamic: 160 45% 92%;
+    --service-islamic-icon: 160 45% 35%;
+    --service-complaint: 0 60% 93%;
+    --service-complaint-icon: 0 60% 50%;
+    --service-event: 280 55% 93%;
+    --service-event-icon: 280 55% 50%;
+    --service-expat: 200 65% 93%;
+    --service-expat-icon: 200 65% 45%;
+    --service-vehicle: 210 45% 93%;
+    --service-vehicle-icon: 210 45% 45%;
 
     /* Gradients */
     --gradient-stats: linear-gradient(135deg, hsl(195 80% 45%), hsl(217 91% 50%));

@@ -5,20 +5,38 @@ import SearchBar from "@/components/SearchBar";
 import ServiceListCard from "@/components/ServiceListCard";
 import { services, sampleServiceData } from "@/data/services";
 
+type VariantType = "default" | "blood" | "job" | "news" | "marketplace" | "islamic" | "complaint" | "event" | "expat" | "emergency";
+
+const getVariant = (slug: string): VariantType => {
+  const map: Record<string, VariantType> = {
+    blood: "blood",
+    jobs: "job",
+    news: "news",
+    marketplace: "marketplace",
+    islamic: "islamic",
+    complaint: "complaint",
+    events: "event",
+    expat: "expat",
+    "emergency-call": "emergency",
+    vehicles: "marketplace",
+  };
+  return map[slug] || "default";
+};
+
 const ServicePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const [search, setSearch] = useState("");
 
   const service = services.find(s => s.slug === slug);
   const items = sampleServiceData[slug || ""] || [];
-
-  const variant = slug === "blood" ? "blood" : slug === "jobs" ? "job" : "default";
+  const variant = getVariant(slug || "");
 
   const filtered = useMemo(() => {
     if (!search) return items;
     return items.filter(item =>
       item.name.toLowerCase().includes(search.toLowerCase()) ||
-      item.location.toLowerCase().includes(search.toLowerCase())
+      item.location.toLowerCase().includes(search.toLowerCase()) ||
+      (item.type && item.type.toLowerCase().includes(search.toLowerCase()))
     );
   }, [items, search]);
 
